@@ -44,6 +44,15 @@
  .nota{display:flex;justify-content:space-between;gap:6px;font-size:.72rem;color:var(--sub);margin-top:4px} .nota b{color:#f6a700;font-weight:700}
  .btn{margin-top:auto;text-align:center;background:linear-gradient(135deg,var(--lar),var(--lar2));color:#fff;font-weight:700;font-size:.82rem;border-radius:999px;padding:9px 0;box-shadow:0 3px 10px rgba(238,77,45,.3)}
  .corpo .btn{margin-top:10px}
+ .ordem{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-4px 6px 12px;font-size:.82rem;color:var(--sub)}
+ .ordem select{font:inherit;font-size:.85rem;color:var(--fg);background:#fff;border:1.5px solid var(--linha);border-radius:999px;padding:7px 30px 7px 14px;
+   appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--lar) 50%),linear-gradient(135deg,var(--lar) 50%,transparent 50%);
+   background-position:calc(100% - 16px) 52%,calc(100% - 11px) 52%;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+ .ordem select:focus{outline:none;border-color:var(--lar)}
+ .secao{grid-column:1/-1;font-weight:800;font-size:.95rem;margin:10px 4px 0;display:flex;align-items:center;gap:8px}
+ .secao::after{content:"";flex:1;height:1.5px;background:var(--linha)}
+ .secao:first-child{margin-top:0}
+ .novo{position:absolute;top:6px;left:6px;background:var(--lar);color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.04em;padding:3px 8px;border-radius:999px}
  #nada,.vazio{text-align:center;color:var(--sub);padding:30px 0}
  footer{max-width:960px;margin:0 auto;padding:0 16px 32px;font-size:.75rem;color:var(--sub);text-align:center;line-height:1.5}
 </style></head>
@@ -57,54 +66,57 @@
  <div class="faixa">⚡ Viu no vídeo? Está aqui! Os preços são de quando a gente viu e mudam rápido. O valor certo é o da loja.</div>
  <div class="chips"><button class="on" data-c="">🔥 Todos</button><button data-c="Casa e energia">⚡ Casa e energia</button><button data-c="Cozinha">🍳 Cozinha</button><button data-c="Carro e moto">🚗 Carro e moto</button><button data-c="Emergência">🔦 Emergência</button></div>
  <div class="titulo"><h3>Achadinhos dos vídeos</h3><span id="n">12 produtos</span></div>
+ <div class="ordem"><label for="ord">Ordenar por</label><select id="ord">
+  <option value="rec">Mais recentes</option><option value="cat">Por categoria</option>
+  <option value="menor">Menor preço</option><option value="maior">Maior preço</option></select></div>
  <div class="grade">
-<a class="card" href="https://s.shopee.com.br/6fisWjUItz" target="_blank" rel="noopener sponsored" data-cat="Emergência" data-busca="lanterna led recarregável usb, 5 modos pra quando a luz acabar: baixo, médio, alto, sos e strobo emergência apagão falta de luz emergência temporal chuva camping">
-  <div class="foto"><img src="img/lanterna.jpg" alt="Lanterna LED recarregável USB, 5 modos" loading="lazy"><span class="tag">🔦 Emergência</span></div>
-  <div class="corpo"><h2>Lanterna LED recarregável USB, 5 modos</h2><p class="dest">pra quando a luz acabar: baixo, médio, alto, SOS e strobo</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>46,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+<a class="card" href="https://s.shopee.com.br/2BGTBp4Mup" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="garrafa térmica de inox com alça (350 ml a 1 l) inox, 4 tamanhos e 9 cores cozinha calor água gelada gelo academia escola trabalho verão hidratação" data-rec="2026-11-15T12:20" data-preco="27.9">
+  <div class="foto"><img src="img/garrafa.jpg" alt="Garrafa térmica de inox com alça (350 ml a 1 L)" loading="lazy"><span class="novo">NOVO</span><span class="tag">🍳 Cozinha</span></div>
+  <div class="corpo"><h2>Garrafa térmica de inox com alça (350 ml a 1 L)</h2><p class="dest">inox, 4 tamanhos e 9 cores</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>27,90<em>conforme o tamanho</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>20 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
 </a>
-<a class="card" href="https://s.shopee.com.br/3LSQYDLp1O" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="mini compressor de ar portátil 130 psi calibra o pneu sem ir ao posto, com visor digital carro e moto pneu carro moto bicicleta posto viagem calibrar">
-  <div class="foto"><img src="img/compressor.jpg" alt="Mini compressor de ar portátil 130 PSI" loading="lazy"><span class="tag">🚗 Carro e moto</span></div>
-  <div class="corpo"><h2>Mini compressor de ar portátil 130 PSI</h2><p class="dest">calibra o pneu sem ir ao posto, com visor digital</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>61,00</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>30 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/1BNvyPq5qj" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="kit 6 potes 2,2 l com tampa e trava (giotto) vão ao freezer e ao micro-ondas, empilháveis cozinha marmita freezer geladeira sobras organizar cozinha comida">
-  <div class="foto"><img src="img/potes.jpg" alt="Kit 6 potes 2,2 L com tampa e trava (Giotto)" loading="lazy"><span class="tag">🍳 Cozinha</span></div>
-  <div class="corpo"><h2>Kit 6 potes 2,2 L com tampa e trava (Giotto)</h2><p class="dest">vão ao freezer e ao micro-ondas, empilháveis</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>34,90</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>20 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/7Af97UnyFP" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="termômetro digital para geladeira e freezer pra ver se a geladeira está abaixo de 5 °c cozinha geladeira freezer temperatura comida anvisa caixa térmica remédio">
-  <div class="foto"><img src="img/termometro.jpg" alt="Termômetro digital para geladeira e freezer" loading="lazy"><span class="tag">🍳 Cozinha</span></div>
-  <div class="corpo"><h2>Termômetro digital para geladeira e freezer</h2><p class="dest">pra ver se a geladeira está abaixo de 5 °C</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>37,74</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 5,0</b><span>499 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/1BNvyYvBlc" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="filtro de linha 20 a com 8 tomadas, disjuntor e voltímetro 8 tomadas, disjuntor e visor da voltagem da rede casa e energia tomada benjamim gambiarra energia voltagem escritório pc">
-  <div class="foto"><img src="img/filtro.jpg" alt="Filtro de linha 20 A com 8 tomadas, disjuntor e voltímetro" loading="lazy"><span class="tag">⚡ Casa e energia</span></div>
-  <div class="corpo"><h2>Filtro de linha 20 A com 8 tomadas, disjuntor e voltímetro</h2><p class="dest">8 tomadas, disjuntor e visor da voltagem da rede</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>123,34<em>no Pix</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>261 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/9KjdhqsZCl" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="filtro de linha 6 tomadas com dps (proteção contra surtos) dps de 7,5 ka contra surtos na rede, bivolt casa e energia raio tempestade temporal surto queda de luz volta da energia tomada energia">
-  <div class="foto"><img src="img/protetor_dps.jpg" alt="Filtro de linha 6 tomadas com DPS (proteção contra surtos)" loading="lazy"><span class="tag">⚡ Casa e energia</span></div>
-  <div class="corpo"><h2>Filtro de linha 6 tomadas com DPS (proteção contra surtos)</h2><p class="dest">DPS de 7,5 kA contra surtos na rede, bivolt</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>89,16<em>no Pix</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/7pupv9wBEh" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="kit potes rasos de inox com tampa hermética rasos e empilháveis, bons pra guardar sobras na geladeira cozinha comida quente sobras geladeira pote raso marmita organizar cozinha comida">
-  <div class="foto"><img src="img/potes_inox.jpg" alt="Kit potes rasos de inox com tampa hermética" loading="lazy"><span class="tag">🍳 Cozinha</span></div>
-  <div class="corpo"><h2>Kit potes rasos de inox com tampa hermética</h2><p class="dest">rasos e empilháveis, bons pra guardar sobras na geladeira</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>58,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,8</b><span>803 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/4qHEMWYBY0" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="protetor solar para para-brisa 140 x 70 cm tapa o sol do para-brisa e dobra numa bolsinha carro e moto carro no sol calor painel volante quente janela do carro estacionar verão">
-  <div class="foto"><img src="img/parasol.jpg" alt="Protetor solar para para-brisa 140 x 70 cm" loading="lazy"><span class="tag">🚗 Carro e moto</span></div>
-  <div class="corpo"><h2>Protetor solar para para-brisa 140 x 70 cm</h2><p class="dest">tapa o sol do para-brisa e dobra numa bolsinha</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>18,88</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>10 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/3B90NVznVh" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="suporte de celular para saída de ar do carro, giratório 360° prende na saída de ar e gira 360° carro e moto celular carro painel gps celular esquentando sol dirigir">
-  <div class="foto"><img src="img/suporte_celular.jpg" alt="Suporte de celular para saída de ar do carro, giratório 360°" loading="lazy"><span class="tag">🚗 Carro e moto</span></div>
-  <div class="corpo"><h2>Suporte de celular para saída de ar do carro, giratório 360°</h2><p class="dest">prende na saída de ar e gira 360°</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>19,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>10 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/5VWv9qcMlM" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="mini ventilador portátil recarregável, 5 velocidades de mão ou de mesa, com visor da bateria e cordão casa e energia calor ventilador verão escritório ônibus gelo quarto quente">
-  <div class="foto"><img src="img/ventilador.jpg" alt="Mini ventilador portátil recarregável, 5 velocidades" loading="lazy"><span class="tag">⚡ Casa e energia</span></div>
-  <div class="corpo"><h2>Mini ventilador portátil recarregável, 5 velocidades</h2><p class="dest">de mão ou de mesa, com visor da bateria e cordão</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>32,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,8</b><span>3 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
-</a>
-<a class="card" href="https://s.shopee.com.br/9fMU7YhQby" target="_blank" rel="noopener sponsored" data-cat="Emergência" data-busca="mini power bank 10.000 mah com cabos embutidos cabos tipo c e iphone embutidos, visor da carga emergência apagão falta de luz celular bateria viagem emergência temporal">
-  <div class="foto"><img src="img/powerbank.jpg" alt="Mini power bank 10.000 mAh com cabos embutidos" loading="lazy"><span class="tag">🔦 Emergência</span></div>
+<a class="card" href="https://s.shopee.com.br/9fMU7YhQby" target="_blank" rel="noopener sponsored" data-cat="Emergência" data-busca="mini power bank 10.000 mah com cabos embutidos cabos tipo c e iphone embutidos, visor da carga emergência apagão falta de luz celular bateria viagem emergência temporal" data-rec="2026-11-15T12:15" data-preco="52.99">
+  <div class="foto"><img src="img/powerbank.jpg" alt="Mini power bank 10.000 mAh com cabos embutidos" loading="lazy"><span class="novo">NOVO</span><span class="tag">🔦 Emergência</span></div>
   <div class="corpo"><h2>Mini power bank 10.000 mAh com cabos embutidos</h2><p class="dest">cabos tipo C e iPhone embutidos, visor da carga</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>52,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,7</b><span>228 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
 </a>
-<a class="card" href="https://s.shopee.com.br/2BGTBp4Mup" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="garrafa térmica de inox com alça (350 ml a 1 l) inox, 4 tamanhos e 9 cores cozinha calor água gelada gelo academia escola trabalho verão hidratação">
-  <div class="foto"><img src="img/garrafa.jpg" alt="Garrafa térmica de inox com alça (350 ml a 1 L)" loading="lazy"><span class="tag">🍳 Cozinha</span></div>
-  <div class="corpo"><h2>Garrafa térmica de inox com alça (350 ml a 1 L)</h2><p class="dest">inox, 4 tamanhos e 9 cores</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>27,90<em>conforme o tamanho</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>20 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+<a class="card" href="https://s.shopee.com.br/5VWv9qcMlM" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="mini ventilador portátil recarregável, 5 velocidades de mão ou de mesa, com visor da bateria e cordão casa e energia calor ventilador verão escritório ônibus gelo quarto quente" data-rec="2026-11-15T12:10" data-preco="32.99">
+  <div class="foto"><img src="img/ventilador.jpg" alt="Mini ventilador portátil recarregável, 5 velocidades" loading="lazy"><span class="novo">NOVO</span><span class="tag">⚡ Casa e energia</span></div>
+  <div class="corpo"><h2>Mini ventilador portátil recarregável, 5 velocidades</h2><p class="dest">de mão ou de mesa, com visor da bateria e cordão</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>32,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,8</b><span>3 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/3B90NVznVh" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="suporte de celular para saída de ar do carro, giratório 360° prende na saída de ar e gira 360° carro e moto celular carro painel gps celular esquentando sol dirigir" data-rec="2026-11-15T12:05" data-preco="19.99">
+  <div class="foto"><img src="img/suporte_celular.jpg" alt="Suporte de celular para saída de ar do carro, giratório 360°" loading="lazy"><span class="novo">NOVO</span><span class="tag">🚗 Carro e moto</span></div>
+  <div class="corpo"><h2>Suporte de celular para saída de ar do carro, giratório 360°</h2><p class="dest">prende na saída de ar e gira 360°</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>19,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>10 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/4qHEMWYBY0" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="protetor solar para para-brisa 140 x 70 cm tapa o sol do para-brisa e dobra numa bolsinha carro e moto carro no sol calor painel volante quente janela do carro estacionar verão" data-rec="2026-11-15T12:00" data-preco="18.88">
+  <div class="foto"><img src="img/parasol.jpg" alt="Protetor solar para para-brisa 140 x 70 cm" loading="lazy"><span class="novo">NOVO</span><span class="tag">🚗 Carro e moto</span></div>
+  <div class="corpo"><h2>Protetor solar para para-brisa 140 x 70 cm</h2><p class="dest">tapa o sol do para-brisa e dobra numa bolsinha</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>18,88</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>10 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/7pupv9wBEh" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="kit potes rasos de inox com tampa hermética rasos e empilháveis, bons pra guardar sobras na geladeira cozinha comida quente sobras geladeira pote raso marmita organizar cozinha comida" data-rec="2026-11-15T11:30" data-preco="58.99">
+  <div class="foto"><img src="img/potes_inox.jpg" alt="Kit potes rasos de inox com tampa hermética" loading="lazy"><span class="novo">NOVO</span><span class="tag">🍳 Cozinha</span></div>
+  <div class="corpo"><h2>Kit potes rasos de inox com tampa hermética</h2><p class="dest">rasos e empilháveis, bons pra guardar sobras na geladeira</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>58,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,8</b><span>803 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/9KjdhqsZCl" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="filtro de linha 6 tomadas com dps (proteção contra surtos) dps de 7,5 ka contra surtos na rede, bivolt casa e energia raio tempestade temporal surto queda de luz volta da energia tomada energia" data-rec="2026-11-15T11:25" data-preco="89.16">
+  <div class="foto"><img src="img/protetor_dps.jpg" alt="Filtro de linha 6 tomadas com DPS (proteção contra surtos)" loading="lazy"><span class="novo">NOVO</span><span class="tag">⚡ Casa e energia</span></div>
+  <div class="corpo"><h2>Filtro de linha 6 tomadas com DPS (proteção contra surtos)</h2><p class="dest">DPS de 7,5 kA contra surtos na rede, bivolt</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>89,16<em>no Pix</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/6fisWjUItz" target="_blank" rel="noopener sponsored" data-cat="Emergência" data-busca="lanterna led recarregável usb, 5 modos pra quando a luz acabar: baixo, médio, alto, sos e strobo emergência apagão falta de luz emergência temporal chuva camping" data-rec="2026-11-15T11:20" data-preco="46.99">
+  <div class="foto"><img src="img/lanterna.jpg" alt="Lanterna LED recarregável USB, 5 modos" loading="lazy"><span class="novo">NOVO</span><span class="tag">🔦 Emergência</span></div>
+  <div class="corpo"><h2>Lanterna LED recarregável USB, 5 modos</h2><p class="dest">pra quando a luz acabar: baixo, médio, alto, SOS e strobo</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>46,99</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/1BNvyYvBlc" target="_blank" rel="noopener sponsored" data-cat="Casa e energia" data-busca="filtro de linha 20 a com 8 tomadas, disjuntor e voltímetro 8 tomadas, disjuntor e visor da voltagem da rede casa e energia tomada benjamim gambiarra energia voltagem escritório pc" data-rec="2026-11-15T11:15" data-preco="123.34">
+  <div class="foto"><img src="img/filtro.jpg" alt="Filtro de linha 20 A com 8 tomadas, disjuntor e voltímetro" loading="lazy"><span class="novo">NOVO</span><span class="tag">⚡ Casa e energia</span></div>
+  <div class="corpo"><h2>Filtro de linha 20 A com 8 tomadas, disjuntor e voltímetro</h2><p class="dest">8 tomadas, disjuntor e visor da voltagem da rede</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>123,34<em>no Pix</em></div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>261 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/7Af97UnyFP" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="termômetro digital para geladeira e freezer pra ver se a geladeira está abaixo de 5 °c cozinha geladeira freezer temperatura comida anvisa caixa térmica remédio" data-rec="2026-11-15T11:10" data-preco="37.74">
+  <div class="foto"><img src="img/termometro.jpg" alt="Termômetro digital para geladeira e freezer" loading="lazy"><span class="novo">NOVO</span><span class="tag">🍳 Cozinha</span></div>
+  <div class="corpo"><h2>Termômetro digital para geladeira e freezer</h2><p class="dest">pra ver se a geladeira está abaixo de 5 °C</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>37,74</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 5,0</b><span>499 vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/1BNvyPq5qj" target="_blank" rel="noopener sponsored" data-cat="Cozinha" data-busca="kit 6 potes 2,2 l com tampa e trava (giotto) vão ao freezer e ao micro-ondas, empilháveis cozinha marmita freezer geladeira sobras organizar cozinha comida" data-rec="2026-11-15T11:05" data-preco="34.9">
+  <div class="foto"><img src="img/potes.jpg" alt="Kit 6 potes 2,2 L com tampa e trava (Giotto)" loading="lazy"><span class="novo">NOVO</span><span class="tag">🍳 Cozinha</span></div>
+  <div class="corpo"><h2>Kit 6 potes 2,2 L com tampa e trava (Giotto)</h2><p class="dest">vão ao freezer e ao micro-ondas, empilháveis</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>34,90</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>20 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
+</a>
+<a class="card" href="https://s.shopee.com.br/3LSQYDLp1O" target="_blank" rel="noopener sponsored" data-cat="Carro e moto" data-busca="mini compressor de ar portátil 130 psi calibra o pneu sem ir ao posto, com visor digital carro e moto pneu carro moto bicicleta posto viagem calibrar" data-rec="2026-11-15T11:00" data-preco="61.0">
+  <div class="foto"><img src="img/compressor.jpg" alt="Mini compressor de ar portátil 130 PSI" loading="lazy"><span class="novo">NOVO</span><span class="tag">🚗 Carro e moto</span></div>
+  <div class="corpo"><h2>Mini compressor de ar portátil 130 PSI</h2><p class="dest">calibra o pneu sem ir ao posto, com visor digital</p><div class="pbox"><span class="plab">Quando vimos (15/11)</span><div class="preco"><small>R$</small>61,00</div><span class="pobs">pode ter mudado</span></div><div class="nota"><b>★ 4,9</b><span>30 mil+ vendidos</span></div><span class="btn">Ver preço de hoje</span></div>
 </a>
  </div>
  <p id="nada" hidden>Nada encontrado. Tente outra palavra.</p>
@@ -115,6 +127,17 @@
  const sem=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  function f(){const t=sem(q.value.trim());let n=0;cs.forEach(c=>{const ok=(!cat||c.dataset.cat===cat)&&(!t||sem(c.dataset.busca).includes(t));c.style.display=ok?'':'none';n+=ok});
   document.getElementById('nada').hidden=n>0;document.getElementById('n').textContent=n+(n==1?' produto':' produtos')}
- q.addEventListener('input',f);
- bs.forEach(b=>b.onclick=()=>{cat=b.dataset.c;bs.forEach(x=>x.classList.toggle('on',x===b));f()});
+ const grade=document.querySelector('.grade'),ord=document.getElementById('ord');
+ const CATS=["Casa e energia", "Cozinha", "Carro e moto", "Emergência"],ICO={"Casa e energia": "⚡", "Cozinha": "🍳", "Carro e moto": "🚗", "Emergência": "🔦", "Outros": "🛍️"};
+ function ordena(){const m=ord.value;grade.querySelectorAll('.secao').forEach(x=>x.remove());
+  const pr=c=>c.dataset.preco?parseFloat(c.dataset.preco):null;
+  const l=[...cs].sort((a,b)=>{
+   if(m==='menor'||m==='maior'){const x=pr(a),y=pr(b);if(x===null)return 1;if(y===null)return -1;return m==='menor'?x-y:y-x}
+   if(m==='cat'){const d=CATS.indexOf(a.dataset.cat)-CATS.indexOf(b.dataset.cat);if(d)return d}
+   return b.dataset.rec.localeCompare(a.dataset.rec)});
+  let ult=null;l.forEach(c=>{if(m==='cat'&&c.dataset.cat!==ult&&c.style.display!=='none'){const h=document.createElement('div');h.className='secao';h.textContent=(ICO[c.dataset.cat]||'🛍️')+' '+c.dataset.cat;grade.appendChild(h);ult=c.dataset.cat}grade.appendChild(c)});
+  try{localStorage.setItem('ord',m)}catch(e){}}
+ ord.addEventListener('change',ordena);
+ q.addEventListener('input',()=>{f();ordena()});
+ bs.forEach(b=>b.onclick=()=>{cat=b.dataset.c;bs.forEach(x=>x.classList.toggle('on',x===b));f();ordena()});
 </script></body></html>
