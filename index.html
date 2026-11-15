@@ -136,7 +136,7 @@
    if(m==='cat'){const d=CATS.indexOf(a.dataset.cat)-CATS.indexOf(b.dataset.cat);if(d)return d}
    return b.dataset.rec.localeCompare(a.dataset.rec)});
   let ult=null;l.forEach(c=>{if(m==='cat'&&c.dataset.cat!==ult&&c.style.display!=='none'){const h=document.createElement('div');h.className='secao';h.textContent=(ICO[c.dataset.cat]||'🛍️')+' '+c.dataset.cat;grade.appendChild(h);ult=c.dataset.cat}grade.appendChild(c)});
-  try{localStorage.setItem('ord',m)}catch(e){}}
+  }
  ord.addEventListener('change',ordena);
  q.addEventListener('input',()=>{f();ordena()});
  bs.forEach(b=>b.onclick=()=>{cat=b.dataset.c;bs.forEach(x=>x.classList.toggle('on',x===b));f();ordena()});
