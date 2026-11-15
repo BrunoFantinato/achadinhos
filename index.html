@@ -124,7 +124,7 @@
  </div>
  <p id="nada" hidden>Nada encontrado. Tente outra palavra.</p>
 </main>
-<footer>#publi: são links de afiliado da Shopee. Se você comprar por eles, o canal pode ganhar uma comissão, sem custo extra para você.<br>Os preços mostram a data e a hora em que foram vistos; o valor, o estoque e o frete são os da loja na hora da compra.</footer>
+<footer>#publi: são links de afiliado da Shopee. Se você comprar por eles, o canal pode ganhar uma comissão, sem custo extra para você.<br>Os preços mostram a data e a hora em que foram vistos; o valor, o estoque e o frete são os da loja na hora da compra.<br>Esta página conta visitas e cliques de forma anônima, sem cookies (hits.sh).</footer>
 <script>
  const q=document.getElementById('q'),cs=[...document.querySelectorAll('.card')],bs=[...document.querySelectorAll('.chips button')];let cat='';
  const sem=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -142,7 +142,11 @@
   }
  ord.addEventListener('change',ordena);
  // contador de cliques por produto (GoatCounter, sem cookies): cada clique em "Ver preço de hoje" vira o evento clique/<id>
- cs.forEach(c=>c.addEventListener('click',()=>{try{window.goatcounter&&window.goatcounter.count({path:'clique/'+c.dataset.id,title:'Clique: '+c.dataset.nome,event:true})}catch(e){}}));
+ const BASE="brunofantinato.github.io/achadinhos";
+ const conta=k=>{if(!BASE)return;try{fetch('https://hits.sh/'+BASE+'/'+k+'.svg',{mode:'no-cors',keepalive:true,cache:'no-store'})}catch(e){try{new Image().src='https://hits.sh/'+BASE+'/'+k+'.svg?'+Date.now()}catch(_){}}};
+ cs.forEach(c=>c.addEventListener('click',()=>conta('clique-'+c.dataset.id)));
+ conta('visita');
+ try{const r=(new URLSearchParams(location.search).get('ref')||'').toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,20);if(r)conta('visita-'+r)}catch(e){}
  q.addEventListener('input',()=>{f();ordena()});
  bs.forEach(b=>b.onclick=()=>{cat=b.dataset.c;bs.forEach(x=>x.classList.toggle('on',x===b));f();ordena()});
 </script></body></html>
